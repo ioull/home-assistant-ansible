@@ -2,6 +2,7 @@ path: temperature
 title: Temperature
 panel: false
 cards:
+{% for entitie in view.entities %}
   - type: 'custom:mini-graph-card'
     align_icon: left
     color_thresholds:
@@ -16,13 +17,14 @@ cards:
       - color: '#ef1d0f'
         value: 23
     entities:
-      - sensor.cdm_tmp_temperature
+      - {{ entitie.temperature_sensor }}
     hour24: true
     line_color: '#1da4f2'
     more_info: false
-    name: Mahéva
+    name: {{ entitie.name }}
     points_per_hour: 1.5
     show:
       points: false
       labels: true
       name: true
+{% endfor %}

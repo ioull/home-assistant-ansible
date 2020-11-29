@@ -1,31 +1,45 @@
 temperatures:
   template: temperatures
   entities:
-    - name: TER_TMP
-      entity_id: TER_TMP
-    - name: GAR_TMP
-      entity_id: GAR_TMP
-    - name: OUT_TMP
-      entity_id: OUT_TMP
-    - name: CAB_TMP
-      entity_id: CAB_TMP
-    - name: CDL_TMP
-      entity_id: CDL_TMP
-    - name: CDM_TMP
-      entity_id: CDM_TMP
-    - name: CDT_TMP
-      entity_id: CDT_TMP
-    - name: CDP_TMP
-      entity_id: CDP_TMP
-    - name: CUI_TMP_congelateur
-      entity_id: CUI_TMP_congelateur
-    - name: GAR_TMP_congelateur1
-      entity_id: GAR_TMP_congelateur1
-    - name: GAR_TMP_congelateur2
-      entity_id: GAR_TMP_congelateur2
-    - name: GAR_TMP_sechoir
-      entity_id: GAR_TMP_sechoir
-    - name: PIS_TMP
-      entity_id: PIS_TMP
-    - name: SAM_TMP
-      entity_id: SAM_TMP
+    - name: Salle à Manger
+      temperature_sensor: sensor.sam_tmp_temperature
+      humidity_sensor: sensor.sam_tmp_humidity
+    - name: Parents
+      temperature_sensor: sensor.cdp_tmp_temperature
+      humidity_sensor: sensor.cdp_tmp_humidity
+    - name: Piscine
+      temperature_sensor: sensor.pis_tmp_temperature
+      humidity_sensor: sensor.pis_tmp_humidity
+    - name: Mahéva
+      temperature_sensor: sensor.cdm_tmp_temperature
+      humidity_sensor: sensor.cdm_tmp_humidity
+    - name: Lilou
+      temperature_sensor: sensor.cdl_tmp_temperature
+      humidity_sensor: sensor.cdl_tmp_humidity
+    - name: Titouan
+      temperature_sensor: sensor.cdt_tmp_temperature
+      humidity_sensor: sensor.cdt_tmp_humidity
+    - name: Terrasse
+      temperature_sensor: sensor.ter_tmp_temperature
+      humidity_sensor: sensor.ter_tmp_humidity
+    - name: Dehors
+      temperature_sensor: sensor.out_tmp_temperature
+      humidity_sensor: sensor.out_tmp_humidity
+    - name: Garage
+      temperature_sensor: sensor.gar_tmp_temperature
+      humidity_sensor: sensor.gar_tmp_humidity
+    - name: Cabanon
+      temperature_sensor: sensor.cab_tmp_temperature
+      humidity_sensor: sensor.cab_tmp_humidity
+    - name: Congelateur
+      temperature_sensor: sensor.cui_tmp_congelateur_temperature
+      humidity_sensor: sensor.cui_tmp_congelateur_humidity
+    - name: Congelateur 1
+      temperature_sensor: sensor.gar_tmp_congelateur1_temperature
+      humidity_sensor: sensor.gar_tmp_congelateur1_humidity
+    - name: Congelateur 2
+      temperature_sensor: sensor.gar_tmp_congelateur2_temperature
+      humidity_sensor: sensor.gar_tmp_congelateur2_humidity
+    - name: Séchoir
+      temperature_sensor: sensor.gar_tmp_sechoir_temperature
+      humidity_sensor: sensor.gar_tmp_sechoir_humidity

@@ -1,6 +1,6 @@
 - name: Create views for {{ lovelace.key }}
   vars:
-    data: "{{ lookup('vars',item) }}"
+    view: "{{ lookup('vars',item) }}"
   template:
     src: "{{ lookup('vars',item).template }}.yaml.j2"
     dest: "{{ ha_lovelace_dir }}/{{ lovelace.key }}/{{ item }}.yaml"
