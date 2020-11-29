@@ -1,6 +1,9 @@
 lights:
   name: Lumières
   icon: mdi:lightbulb
+  visibility:
+    - sandrine
+    - vincent
   template: entities
   entities:
     - light.cdl_led_plafond

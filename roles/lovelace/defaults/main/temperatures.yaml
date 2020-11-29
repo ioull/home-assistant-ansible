@@ -2,6 +2,12 @@ temperatures:
   name: Temperatures
   icon: mdi:thermometer
   template: temperatures
+  visibility:
+    - lilou
+    - maheva
+    - titouan
+    - sandrine
+    - vincent
   entities:
     - name: Salle à Manger
       temperature_sensor: sensor.sam_tmp_temperature

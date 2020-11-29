@@ -1,6 +1,10 @@
 path: {{ view_name }}
 title: {{ view.name }}
 icon: {{ view.icon }}
+visible:
+{% for user in view.visibility %}
+  - user: {{ lovelace_users[user].id }}
+{% endfor %}
 panel: false
 cards:
 {% for entity in view.entities %}

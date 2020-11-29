@@ -1,6 +1,9 @@
 covers:
   name: Volets
   icon: mdi:window-shutter
+  visibility:
+    - sandrine
+    - vincent
   template: entities
   entities:
     - cover.cdp_vol_ouest_1
