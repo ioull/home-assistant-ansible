@@ -3,6 +3,6 @@ Mes roles ansibles pour creer mes entities et mes dashboards
 
 # Launch
 ```
-sudo ansible-playbook entities.yml
-sudo ansible-playbook lovelace.yml
+ansible-playbook --ask-become-pass entities.yml
+ansible-playbook --ask-become-pass lovelace.yml
 ```
