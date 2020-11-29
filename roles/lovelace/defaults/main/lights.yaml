@@ -1,5 +1,6 @@
 lights:
   name: Lumières
+  icon: mdi:lightbulb
   template: entities
   entities:
     - light.cdl_led_plafond

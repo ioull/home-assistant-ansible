@@ -1,5 +1,6 @@
 temperatures:
   name: Temperatures
+  icon: mdi:thermometer
   template: temperatures
   entities:
     - name: Salle à Manger
