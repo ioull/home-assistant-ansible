@@ -1,0 +1,11 @@
+  - name: create directories
+    file:
+      path: "{{ ha_package_dir }}/{{ item }}"
+      state: directory
+    loop: "{{ entities }}"
+
+  - name: Create entities
+    include_tasks: entitiestemplate.yml
+    loop: "{{ entities }}"
+    loop_control:
+       loop_var: entities_grp

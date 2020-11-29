@@ -1,0 +1,16 @@
+plug:
+  - name: CAB_PRI_relais
+    entity_id: CAB_PRI_relais
+    type: zigbee2mqtt_plug_ikea
+  - name: CDP_PRI_tele
+    entity_id: CDP_PRI_tele
+    type: zigbee2mqtt_plug_ikea
+  - name: TER_PRI_guirlande
+    entity_id: TER_PRI_guirlande
+    type: zigbee2mqtt_plug_ikea
+  - name: CDL_PRI_relais
+    entity_id: CDL_PRI_relais
+    type: zigbee2mqtt_plug_xiaomi
+  - name: CDP_PRI_moustique
+    entity_id: CDP_PRI_moustique
+    type: zigbee2mqtt_plug_xiaomi

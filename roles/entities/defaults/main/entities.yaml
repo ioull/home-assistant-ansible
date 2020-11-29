@@ -1,0 +1,10 @@
+entities:
+  - camera
+  - cover
+  - light
+  - temperature
+  - contact
+  - plug
+  - pir
+  - remote
+  - other

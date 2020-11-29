@@ -1,0 +1,6 @@
+- hosts: localhost
+  vars:
+    ha_package_dir: /services/homeassistant/data/packages/ansible
+    #ha_package_dir: /tmp/package
+  roles:
+    - entities

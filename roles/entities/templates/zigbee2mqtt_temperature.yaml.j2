@@ -1,0 +1,42 @@
+sensor:
+  - platform: "mqtt"
+    name: "{{ data.entity_id }}_battery"
+    state_topic: "zigbee2mqtt/{{ data.entity_id }}"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "%"
+    value_template: "{{ '{{' }} value_json.battery {{ '}}' }}"
+    device_class: "battery"
+
+  - platform: "mqtt"
+    name: "{{ data.entity_id }}_temperature"
+    state_topic: "zigbee2mqtt/{{ data.entity_id }}"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "°C"
+    value_template: "{{ '{{' }} value_json.temperature {{ '}}' }}"
+    device_class: "temperature"
+
+  - platform: "mqtt"
+    name: "{{ data.entity_id }}_humidity"
+    state_topic: "zigbee2mqtt/{{ data.entity_id }}"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "%"
+    value_template: "{{ '{{' }} value_json.humidity {{ '}}' }}"
+    device_class: "humidity"
+
+{% if data.pressure is defined %}
+  - platform: "mqtt"
+    name: "{{ data.entity_id }}_pressure"
+    state_topic: "zigbee2mqtt/{{ data.entity_id }}"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "hPa"
+    value_template: "{{ '{{' }} value_json.pressure {{ '}}' }}"
+    device_class: "pressure"
+
+{% endif %}
+  - platform: "mqtt"
+    name: "{{ data.entity_id }}_linkquality"
+    state_topic: "zigbee2mqtt/{{ data.entity_id }}"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    icon: "mdi:signal"
+    unit_of_measurement: "lqi"
+    value_template: "{{ '{{' }} value_json.linkquality {{ '}}' }}"

@@ -1,0 +1,45 @@
+temperature:
+  - name: TER_TMP
+    entity_id: TER_TMP
+    type: zigbee2mqtt_temperature
+  - name: GAR_TMP
+    entity_id: GAR_TMP
+    type: zigbee2mqtt_temperature
+    pressure: true
+  - name: OUT_TMP
+    entity_id: OUT_TMP
+    type: zigbee2mqtt_temperature
+    pressure: true
+  - name: CAB_TMP
+    entity_id: CAB_TMP
+    type: jeedom2mqtt_temperature
+  - name: CDL_TMP
+    entity_id: CDL_TMP
+    type: jeedom2mqtt_temperature
+  - name: CDM_TMP
+    entity_id: CDM_TMP
+    type: jeedom2mqtt_temperature
+  - name: CDT_TMP
+    entity_id: CDT_TMP
+    type: jeedom2mqtt_temperature
+  - name: CDP_TMP
+    entity_id: CDP_TMP
+    type: jeedom2mqtt_temperature
+  - name: CUI_TMP_congelateur
+    entity_id: CUI_TMP_congelateur
+    type: jeedom2mqtt_temperature
+  - name: GAR_TMP_congelateur1
+    entity_id: GAR_TMP_congelateur1
+    type: jeedom2mqtt_temperature
+  - name: GAR_TMP_congelateur2
+    entity_id: GAR_TMP_congelateur2
+    type: jeedom2mqtt_temperature
+  - name: GAR_TMP_sechoir
+    entity_id: GAR_TMP_sechoir
+    type: jeedom2mqtt_temperature
+  - name: PIS_TMP
+    entity_id: PIS_TMP
+    type: jeedom2mqtt_temperature
+  - name: SAM_TMP
+    entity_id: SAM_TMP
+    type: jeedom2mqtt_temperature

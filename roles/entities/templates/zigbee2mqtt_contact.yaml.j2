@@ -1,0 +1,27 @@
+sensor:
+  - platform: "mqtt"
+    name: "{{ data.entity_id }}_battery"
+    state_topic: "zigbee2mqtt/{{ data.entity_id }}"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "%"
+    value_template: "{{ '{{' }} value_json.battery {{ '}}' }}"
+    device_class: "battery"
+
+  - platform: "mqtt"
+    name: "{{ data.entity_id }}_linkquality"
+    state_topic: "zigbee2mqtt/{{ data.entity_id }}"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    icon: "mdi:signal"
+    unit_of_measurement: "lqi"
+    value_template: "{{ '{{' }} value_json.linkquality {{ '}}' }}"
+
+binary_sensor:
+  - platform: "mqtt"
+    name: "{{ data.entity_id }}_contact"
+    state_topic: "zigbee2mqtt/{{ data.entity_id }}"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ '{{' }} value_json.contact {{ '}}' }}"
+    payload_on: false
+    payload_off: true
+    device_class: "door"
+

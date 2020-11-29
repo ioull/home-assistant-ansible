@@ -1,0 +1,48 @@
+light:
+  - name: SAM Plafond
+    entity_id: SAM_LED_plafond
+    type: zwave2mqtt_fgd212
+  - name: Buffet Salle à Manger
+    entity_id: SAM_LED_buffet
+    type: zigbee2mqtt_led
+  - name: Etagère Salle à Manger
+    entity_id: SAM_LED_etagere
+    type: zigbee2mqtt_led
+    color_temp: true
+  - name: Plafond chambre Titouan
+    entity_id: CDT_LED_plafond
+    type: zigbee2mqtt_led
+    xy: true
+  - name: Plafond chambre Lilou
+    entity_id: CDL_LED_plafond
+    type: zigbee2mqtt_led
+    xy: true
+  - name: Plafond chambre Mahé
+    entity_id: CDM_LED_plafond
+    type: zigbee2mqtt_led
+    xy: true
+  - name: Ext entree 1
+    entity_id: OUT_LED_entree1
+    type: zigbee2mqtt_led
+  - name: Ext entree 2
+    entity_id: OUT_LED_entree2
+    type: zigbee2mqtt_led
+  - name: Ext garage 1
+    entity_id: OUT_LED_garage1
+    type: zigbee2mqtt_led
+  - name: Ext garage 2
+    entity_id: OUT_LED_garage2
+    type: zigbee2mqtt_led
+  - name: Ext allee 1
+    entity_id: OUT_LED_allee1
+    type: zigbee2mqtt_led
+  - name: Ext allee 2
+    entity_id: OUT_LED_allee2
+    type: zigbee2mqtt_led
+  - name: Ext allee 3
+    entity_id: OUT_LED_allee3
+    type: zigbee2mqtt_led
+  - name: CDP_LED_tele
+    entity_id: CDP_LED_tele
+    effect_hue: true
+    type: zigbee2mqtt_led

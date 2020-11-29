@@ -1,0 +1,11 @@
+cover:
+  - platform: mqtt
+    name: "{{ data.entity_id }}"
+    command_topic: "nodered/volets/FGR/{{ data.entity_id }}"
+    position_topic: "zwave2mqtt/{{ data.entity_id }}/38/1/0"
+    set_position_topic: "zwave2mqtt/{{ data.entity_id }}/38/1/0/set"
+    value_template: "{{ '{{' }} value {{ '}}' }}"
+    position_open: 99
+    position_closed: 0
+    payload_open: "99"
+    payload_close: "0"

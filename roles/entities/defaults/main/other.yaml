@@ -1,0 +1,7 @@
+other:
+  - name: OUT_LUM_entree
+    entity_id: OUT_LUM_entree
+    type: zigbee2mqtt_illuminance
+  - name: SAM_VIB_portefenetre1
+    entity_id: SAM_VIB_portefenetre1
+    type: zigbee2mqtt_vibration

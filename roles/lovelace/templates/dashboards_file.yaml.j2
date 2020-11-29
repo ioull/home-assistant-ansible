@@ -1,0 +1,8 @@
+{% for dashboard in dashboards_list %}
+lovelace-{{dashboard.key}}:
+    mode: yaml
+    title: {{dashboard.value.title}}
+    icon: {{dashboard.value.icon}}
+    show_in_sidebar: {{dashboard.value.show_in_sidebar}}
+    filename: lovelace/{{dashboard.key}}.yaml
+{% endfor %}

@@ -1,0 +1,45 @@
+remote:
+  - name: CDL_TEL_plafond
+    entity_id: CDL_TEL_plafond
+    type: zigbee2mqtt_remote
+    updatable: true
+  - name: CDM_TEL_plafond
+    entity_id: CDM_TEL_plafond
+    type: zigbee2mqtt_remote
+    updatable: true
+  - name: CDT_TEL_plafond
+    entity_id: CDT_TEL_plafond
+    type: zigbee2mqtt_remote
+    updatable: true
+  - name: CDP_TEL_ikea
+    entity_id: CDP_TEL_ikea
+    type: zigbee2mqtt_remote
+    updatable: true
+  - name: CDL_BUT_plafond
+    entity_id: CDL_BUT_plafond
+    type: zigbee2mqtt_remote
+    updatable: true
+  - name: CDM_BUT_plafond
+    entity_id: CDM_BUT_plafond
+    type: zigbee2mqtt_remote
+    updatable: true
+  - name: CDT_BUT_plafond
+    entity_id: CDT_BUT_plafond
+    type: zigbee2mqtt_remote
+    updatable: true
+  - name: OUT_BUT_lumiereallee
+    entity_id: OUT_BUT_lumiereallee
+    type: zigbee2mqtt_remote
+    updatable: true
+  - name: OUT_BUT_lumiereentree
+    entity_id: OUT_BUT_lumiereentree
+    type: zigbee2mqtt_remote
+    updatable: true
+  - name: TER_BUT_lumiere
+    entity_id: TER_BUT_lumiere
+    type: zigbee2mqtt_remote
+    updatable: true
+  - name: SAM_TEL_hue
+    entity_id: SAM_TEL_hue
+    type: zigbee2mqtt_remote
+    updatable: true

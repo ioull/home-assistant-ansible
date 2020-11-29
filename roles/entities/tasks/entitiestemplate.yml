@@ -1,0 +1,9 @@
+- name: Create entities files {{ entities_grp }}
+  vars:
+    data: "{{ item }}"
+  template:
+    src: "{{ item.type }}.yaml.j2"
+    dest: "{{ ha_package_dir }}/{{ entities_grp }}/{{ item.entity_id | lower}}.yaml"
+  loop: "{{ lookup('vars',entities_grp) }}"
+  notify:
+    - restart hass

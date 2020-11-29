@@ -1,0 +1,4 @@
+views:
+{% for view in data.views %}
+  - !include {{ dashboard_name }}/{{ view }}.yaml
+{% endfor %}

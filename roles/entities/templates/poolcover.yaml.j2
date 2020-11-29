@@ -1,0 +1,12 @@
+cover:
+  - platform: mqtt
+    name: "{{ data.entity_id }}"
+    command_topic: "zwave2mqtt/{{ data.entity_id }}/38/1/0/set"
+    state_topic: "zwave2mqtt/{{ data.entity_id }}/38/1/0"
+    value_template: "{{ '{{' }} value {{ '}}' }}"
+    state_open: 99
+    state_closed: 0
+    payload_open: "99"
+    payload_close: "0"
+    payload_stop: "100"
+    optimistic: true

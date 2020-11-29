@@ -1,0 +1,16 @@
+camera:
+  - platform: generic
+    name: "{{ data.entity_id }}"
+    still_image_url: "http://{{ data.baseurl }}/web/tmpfs/snap.jpg"
+{% if data.login is defined and data.password is defined %}
+    stream_source: rtsp://{{ data.login }}:{{ data.password }}@{{ data.baseurl }}:554/2
+{% else %}
+    # Put {{ data.entity_id | lower }}_rtsp: rtsp://user:password@{{ data.baseurl }}:554/2 in secrets.yaml
+    stream_source: !secret {{ data.entity_id | lower }}_rtsp
+{% endif %}
+    username: {% if data.login is defined %}{{ data.login }}
+{% else %}!secret {{ data.entity_id | lower }}_login
+{% endif %}
+    password: {% if data.password is defined %}{{ data.password }}
+{% else %}!secret {{ data.entity_id | lower }}_pwd
+{% endif %}

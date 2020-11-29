@@ -1,0 +1,31 @@
+temperatures:
+  template: temperatures
+  entities:
+    - name: TER_TMP
+      entity_id: TER_TMP
+    - name: GAR_TMP
+      entity_id: GAR_TMP
+    - name: OUT_TMP
+      entity_id: OUT_TMP
+    - name: CAB_TMP
+      entity_id: CAB_TMP
+    - name: CDL_TMP
+      entity_id: CDL_TMP
+    - name: CDM_TMP
+      entity_id: CDM_TMP
+    - name: CDT_TMP
+      entity_id: CDT_TMP
+    - name: CDP_TMP
+      entity_id: CDP_TMP
+    - name: CUI_TMP_congelateur
+      entity_id: CUI_TMP_congelateur
+    - name: GAR_TMP_congelateur1
+      entity_id: GAR_TMP_congelateur1
+    - name: GAR_TMP_congelateur2
+      entity_id: GAR_TMP_congelateur2
+    - name: GAR_TMP_sechoir
+      entity_id: GAR_TMP_sechoir
+    - name: PIS_TMP
+      entity_id: PIS_TMP
+    - name: SAM_TMP
+      entity_id: SAM_TMP

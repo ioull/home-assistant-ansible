@@ -1,0 +1,16 @@
+lovelaces:
+  home:
+    title: Home
+    icon: mdi:home
+    show_in_sidebar: true
+    views:
+      - temperatures
+      - lights
+      - covers
+  test:
+    title: TEST
+    icon: mdi:window-shutter
+    show_in_sidebar: false
+    views:
+      - temperatures
+      - lights

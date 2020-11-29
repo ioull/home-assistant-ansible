@@ -1,0 +1,46 @@
+light:
+  - platform: "mqtt"
+    name: "{{ data.entity_id }}"
+    state_topic: "zigbee2mqtt/{{ data.entity_id }}"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+{% if data.hs is defined %}
+    hs: {{ data.hs | lower }}
+{% endif %}
+{% if data.xy is defined %}
+    xy: {{ data.xy | lower }}
+{% endif %}
+{% if data.color_temp is defined %}
+    color_temp: {{ data.color_temp | lower }}
+{% endif %}
+    schema: "json"
+    command_topic: "zigbee2mqtt/{{ data.entity_id }}/set"
+    brightness_scale: 254
+{% if data.effect_hue is defined %}
+    effect: true
+    effect_list:
+      - "blink"
+      - "breathe"
+      - "okay"
+      - "channel_change"
+      - "finish_effect"
+      - "stop_effect"
+{% endif %}
+
+sensor:
+  - platform: "mqtt"
+    name: "{{ data.entity_id }}"
+    state_topic: "zigbee2mqtt/{{ data.entity_id }}"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    icon: "mdi:signal"
+    unit_of_measurement: "lqi"
+    value_template: "{{ '{{' }} value_json.linkquality {{ '}}' }}"
+
+binary_sensor:
+  - platform: "mqtt"
+    name: "{{ data.entity_id }}"
+    state_topic: "zigbee2mqtt/{{ data.entity_id }}"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_on: true
+    payload_off: false
+    value_template: "{{ '{{' }} value_json.update_available {{ '}}' }}"

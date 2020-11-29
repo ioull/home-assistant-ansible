@@ -1,0 +1,5 @@
+- hosts: localhost
+  vars:
+    ha_lovelace_dir: /services/homeassistant/data/lovelace
+  roles:
+      - lovelace

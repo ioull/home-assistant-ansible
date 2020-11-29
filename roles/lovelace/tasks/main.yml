@@ -1,0 +1,31 @@
+- name: create directories
+  file:
+    path: "{{ ha_lovelace_dir }}/{{ item.key }}"
+    state: directory
+  loop: "{{ lovelaces | dict2items }}"
+
+- name: Create dashboards file
+  vars:
+    dashboards_list: "{{ lovelaces | dict2items }}"
+  template:
+    src: "dashboards_file.yaml.j2"
+    dest: "{{ ha_lovelace_dir }}/dashboards.yaml"
+  notify:
+    - restart hass
+
+- name: Create dashboards files
+  vars:
+    data: "{{ item.value }}"
+    dashboard_name: "{{ item.key }}"
+  template:
+    src: "dashboard.yaml.j2"
+    dest: "{{ ha_lovelace_dir }}/{{ item.key }}.yaml"
+  loop: "{{ lovelaces | dict2items }}"
+  notify:
+    - restart hass
+
+- name: Create views
+  include_tasks: create_views.yml
+  loop: "{{ lovelaces | dict2items }}"
+  loop_control:
+    loop_var: lovelace
