@@ -1,12 +1,5 @@
-path: {{ view_name }}
-title: {{ view.name }}
-icon: {{ view.icon }}
-visible:
-{% for user in view.visibility %}
-  - user: {{ lovelace_users[user].id }}
-{% endfor %}
-panel: false
-cards:
+{% extends "layout/view_layout.yaml.j2" %}
+{% block cardlist %}
 {% for entity in view.entities %}
   - type: 'custom:mini-graph-card'
     align_icon: left
@@ -33,3 +26,4 @@ cards:
       labels: true
       name: true
 {% endfor %}
+{% endblock %}
