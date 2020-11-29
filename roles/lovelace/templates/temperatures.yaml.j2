@@ -3,7 +3,7 @@ title: {{ view.name }}
 icon: {{ view.icon }}
 panel: false
 cards:
-{% for entitie in view.entities %}
+{% for entity in view.entities %}
   - type: 'custom:mini-graph-card'
     align_icon: left
     color_thresholds:
@@ -18,11 +18,11 @@ cards:
       - color: '#ef1d0f'
         value: 23
     entities:
-      - {{ entitie.temperature_sensor }}
+      - {{ entity.temperature_sensor }}
     hour24: true
     line_color: '#1da4f2'
     more_info: false
-    name: {{ entitie.name }}
+    name: {{ entity.name }}
     points_per_hour: 1.5
     show:
       points: false
