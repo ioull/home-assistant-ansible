@@ -1,0 +1,11 @@
+- hosts: localhost
+  roles:
+    - role: entities
+      vars:
+        ha_package_dir: /services/homeassistant/data/packages/ansible
+      tags: [entities]
+    - role: lovelace
+      vars:
+        ha_lovelace_dir: /services/homeassistant/data/lovelace
+      tags: [lovelace]
+

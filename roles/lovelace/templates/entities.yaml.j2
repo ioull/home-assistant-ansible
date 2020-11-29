@@ -1,0 +1,11 @@
+path: {{ view_name }}
+title: {{ view.name }}
+icon: {{ view.icon }}
+panel: false
+cards:
+  - type: entities
+    entities:
+{% for entity in view.entities %}
+      - {{ entity }}
+{% endfor %}
+
