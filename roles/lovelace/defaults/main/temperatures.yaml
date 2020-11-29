@@ -1,4 +1,5 @@
 temperatures:
+  name: Temperatures
   template: temperatures
   entities:
     - name: Salle à Manger

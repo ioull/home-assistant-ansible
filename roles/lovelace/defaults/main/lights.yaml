@@ -1,31 +1,19 @@
 lights:
-  template: lights
+  name: Lumières
+  template: entities
   entities:
-    - name: SAM Plafond
-      entity_id: SAM_LED_plafond
-    - name: Buffet Salle à Manger
-      entity_id: SAM_LED_buffet
-    - name: Etagère Salle à Manger
-      entity_id: SAM_LED_etagere
-    - name: Plafond chambre Titouan
-      entity_id: CDT_LED_plafond
-    - name: Plafond chambre Lilou
-      entity_id: CDL_LED_plafond
-    - name: Plafond chambre Mahé
-      entity_id: CDM_LED_plafond
-    - name: Ext entree 1
-      entity_id: OUT_LED_entree1
-    - name: Ext entree 2
-      entity_id: OUT_LED_entree2
-    - name: Ext garage 1
-      entity_id: OUT_LED_garage1
-    - name: Ext garage 2
-      entity_id: OUT_LED_garage2
-    - name: Ext allee 1
-      entity_id: OUT_LED_allee1
-    - name: Ext allee 2
-      entity_id: OUT_LED_allee2
-    - name: Ext allee 3
-      entity_id: OUT_LED_allee3
-    - name: CDP_LED_tele
-      entity_id: CDP_LED_tele
+    - light.cdl_led_plafond
+    - light.cdm_led_plafond
+    - light.cdp_led_tele
+    - light.cdt_led_plafond
+    - light.out_led_allee1
+    - light.out_led_allee2
+    - light.out_led_allee3
+    - light.out_led_entree1
+    - light.out_led_entree2
+    - light.out_led_garage1
+    - light.out_led_garage2
+    - light.sam_led_buffet
+    - light.sam_led_etagere
+    - light.sam_led_plafond
+    - light.sam_light

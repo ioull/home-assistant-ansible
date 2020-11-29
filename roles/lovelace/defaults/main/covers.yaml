@@ -1,17 +1,11 @@
 covers:
-  template: covers
+  name: Volets
+  template: entities
   entities:
-    - name: CDP_VOL_ouest_1
-      entity_id: CDP_VOL_ouest_1
-    - name: CDP_VOL_ouest_2
-      entity_id: CDP_VOL_ouest_2
-    - name: CDP_VOL_sud_1
-      entity_id: CDP_VOL_sud_1
-    - name: CDP_VOL_sud_2
-      entity_id: CDP_VOL_sud_2
-    - name: CDP_VOL_terrasse
-      entity_id: CDP_VOL_terrasse
-    - name: GAR_VOL
-      entity_id: GAR_VOL
-    - name: PIS_VOL
-      entity_id: PIS_VOL
+    - cover.cdp_vol_ouest_1
+    - cover.cdp_vol_ouest_2
+    - cover.cdp_vol_sud_1
+    - cover.cdp_vol_sud_2
+    - cover.cdp_vol_terrasse
+    - cover.pis_vol
+    - cover.gar_vol
