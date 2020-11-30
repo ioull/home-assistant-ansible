@@ -1,20 +1,14 @@
 pir:
   - name: CDP_PIR
     entity_id: CDP_PIR
-    type: zigbee2mqtt_pir
   - name: DGT_PIR
     entity_id: DGT_PIR
-    type: zigbee2mqtt_pir
   - name: ENT_PIR
     entity_id: ENT_PIR
-    type: zigbee2mqtt_pir
   - name: SAM_PIR
     entity_id: SAM_PIR
-    type: zigbee2mqtt_pir
   - name: TER_PIR
     entity_id: TER_PIR
-    type: zigbee2mqtt_pir
   - name: OUT_PIR_entree
     entity_id: OUT_PIR_entree
     illuminance: true
-    type: zigbee2mqtt_pir

@@ -1,14 +1,11 @@
 temperature:
   - name: TER_TMP
     entity_id: TER_TMP
-    type: zigbee2mqtt_temperature
   - name: GAR_TMP
     entity_id: GAR_TMP
-    type: zigbee2mqtt_temperature
     pressure: true
   - name: OUT_TMP
     entity_id: OUT_TMP
-    type: zigbee2mqtt_temperature
     pressure: true
   - name: CAB_TMP
     entity_id: CAB_TMP

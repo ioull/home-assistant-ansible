@@ -1,0 +1,9 @@
+default_template_type:
+  camera: camera
+  cover: zwave2mqtt_fgrm222
+  light: zigbee2mqtt_led
+  temperature: zigbee2mqtt_temperature
+  contact: zigbee2mqtt_contact
+  plug:
+  pir: zigbee2mqtt_pir
+  remote: zigbee2mqtt_remote

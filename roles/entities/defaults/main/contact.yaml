@@ -1,43 +1,29 @@
 contact:
   - name: CDP_CON_fenetre1
     entity_id: CDP_CON_fenetre1
-    type: zigbee2mqtt_contact
   - name: CDP_CON_fenetre2
     entity_id: CDP_CON_fenetre2
-    type: zigbee2mqtt_contact
   - name: CDP_CON_fenetre3
     entity_id: CDP_CON_fenetre3
-    type: zigbee2mqtt_contact
   - name: CDP_CON_fenetre4
     entity_id: CDP_CON_fenetre4
-    type: zigbee2mqtt_contact
   - name: CDP_CON_portefenetre
     entity_id: CDP_CON_portefenetre
-    type: zigbee2mqtt_contact
   - name: CDL_CON_fenetre
     entity_id: CDL_CON_fenetre
-    type: zigbee2mqtt_contact
   - name: CDM_CON_fenetre
     entity_id: CDM_CON_fenetre
-    type: zigbee2mqtt_contact
   - name: CDT_CON_fenetre
     entity_id: CDT_CON_fenetre
-    type: zigbee2mqtt_contact
   - name: CEL_CON_fenetre
     entity_id: CEL_CON_fenetre
-    type: zigbee2mqtt_contact
   - name: CUI_CON_fenetre
     entity_id: CUI_CON_fenetre
-    type: zigbee2mqtt_contact
   - name: GAR_CON_fenetre
     entity_id: GAR_CON_fenetre
-    type: zigbee2mqtt_contact
   - name: SAM_CON_portefenetre1
     entity_id: SAM_CON_portefenetre1
-    type: zigbee2mqtt_contact
   - name: SAM_CON_portefenetre2
     entity_id: SAM_CON_portefenetre2
-    type: zigbee2mqtt_contact
   - name: SAM_CON_volet
     entity_id: SAM_CON_volet
-    type: zigbee2mqtt_contact

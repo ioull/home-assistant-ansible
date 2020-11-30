@@ -2,7 +2,7 @@
   vars:
     data: "{{ item }}"
   template:
-    src: "{{ item.type }}.yaml.j2"
+    src: "{{ item.type | d(default_template_type[entities_grp])}}.yaml.j2"
     dest: "{{ ha_package_dir }}/{{ entities_grp }}/{{ item.entity_id | lower}}.yaml"
   loop: "{{ lookup('vars',entities_grp) }}"
   notify:
