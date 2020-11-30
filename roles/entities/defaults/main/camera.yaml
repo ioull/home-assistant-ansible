@@ -1,7 +1,5 @@
 camera:
-  - name: TER_CAM
-    entity_id: TER_CAM
+  - entity_id: TER_CAM
     baseurl: 192.168.10.30
-  - name: PIS_CAM
-    entity_id: PIS_CAM
+  - entity_id: PIS_CAM
     baseurl: 192.168.10.31

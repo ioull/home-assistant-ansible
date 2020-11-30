@@ -1,34 +1,23 @@
 remote:
-  - name: CDL_TEL_plafond
-    entity_id: CDL_TEL_plafond
+  - entity_id: CDL_TEL_plafond
     updatable: true
-  - name: CDM_TEL_plafond
-    entity_id: CDM_TEL_plafond
+  - entity_id: CDM_TEL_plafond
     updatable: true
-  - name: CDT_TEL_plafond
-    entity_id: CDT_TEL_plafond
+  - entity_id: CDT_TEL_plafond
     updatable: true
-  - name: CDP_TEL_ikea
-    entity_id: CDP_TEL_ikea
+  - entity_id: CDP_TEL_ikea
     updatable: true
-  - name: CDL_BUT_plafond
-    entity_id: CDL_BUT_plafond
+  - entity_id: CDL_BUT_plafond
     updatable: true
-  - name: CDM_BUT_plafond
-    entity_id: CDM_BUT_plafond
+  - entity_id: CDM_BUT_plafond
     updatable: true
-  - name: CDT_BUT_plafond
-    entity_id: CDT_BUT_plafond
+  - entity_id: CDT_BUT_plafond
     updatable: true
-  - name: OUT_BUT_lumiereallee
-    entity_id: OUT_BUT_lumiereallee
+  - entity_id: OUT_BUT_lumiereallee
     updatable: true
-  - name: OUT_BUT_lumiereentree
-    entity_id: OUT_BUT_lumiereentree
+  - entity_id: OUT_BUT_lumiereentree
     updatable: true
-  - name: TER_BUT_lumiere
-    entity_id: TER_BUT_lumiere
+  - entity_id: TER_BUT_lumiere
     updatable: true
-  - name: SAM_TEL_hue
-    entity_id: SAM_TEL_hue
+  - entity_id: SAM_TEL_hue
     updatable: true

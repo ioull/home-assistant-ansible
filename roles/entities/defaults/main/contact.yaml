@@ -1,29 +1,15 @@
 contact:
-  - name: CDP_CON_fenetre1
-    entity_id: CDP_CON_fenetre1
-  - name: CDP_CON_fenetre2
-    entity_id: CDP_CON_fenetre2
-  - name: CDP_CON_fenetre3
-    entity_id: CDP_CON_fenetre3
-  - name: CDP_CON_fenetre4
-    entity_id: CDP_CON_fenetre4
-  - name: CDP_CON_portefenetre
-    entity_id: CDP_CON_portefenetre
-  - name: CDL_CON_fenetre
-    entity_id: CDL_CON_fenetre
-  - name: CDM_CON_fenetre
-    entity_id: CDM_CON_fenetre
-  - name: CDT_CON_fenetre
-    entity_id: CDT_CON_fenetre
-  - name: CEL_CON_fenetre
-    entity_id: CEL_CON_fenetre
-  - name: CUI_CON_fenetre
-    entity_id: CUI_CON_fenetre
-  - name: GAR_CON_fenetre
-    entity_id: GAR_CON_fenetre
-  - name: SAM_CON_portefenetre1
-    entity_id: SAM_CON_portefenetre1
-  - name: SAM_CON_portefenetre2
-    entity_id: SAM_CON_portefenetre2
-  - name: SAM_CON_volet
-    entity_id: SAM_CON_volet
+  - entity_id: CDP_CON_fenetre1
+  - entity_id: CDP_CON_fenetre2
+  - entity_id: CDP_CON_fenetre3
+  - entity_id: CDP_CON_fenetre4
+  - entity_id: CDP_CON_portefenetre
+  - entity_id: CDL_CON_fenetre
+  - entity_id: CDM_CON_fenetre
+  - entity_id: CDT_CON_fenetre
+  - entity_id: CEL_CON_fenetre
+  - entity_id: CUI_CON_fenetre
+  - entity_id: GAR_CON_fenetre
+  - entity_id: SAM_CON_portefenetre1
+  - entity_id: SAM_CON_portefenetre2
+  - entity_id: SAM_CON_volet

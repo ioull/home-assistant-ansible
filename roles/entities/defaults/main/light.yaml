@@ -1,35 +1,21 @@
 light:
-  - name: SAM Plafond
-    entity_id: SAM_LED_plafond
+  - entity_id: SAM_LED_plafond
     type: zwave2mqtt_fgd212
-  - name: Buffet Salle à Manger
-    entity_id: SAM_LED_buffet
-  - name: Etagère Salle à Manger
-    entity_id: SAM_LED_etagere
+  - entity_id: SAM_LED_buffet
+  - entity_id: SAM_LED_etagere
     color_temp: true
-  - name: Plafond chambre Titouan
-    entity_id: CDT_LED_plafond
+  - entity_id: CDT_LED_plafond
     xy: true
-  - name: Plafond chambre Lilou
-    entity_id: CDL_LED_plafond
+  - entity_id: CDL_LED_plafond
     xy: true
-  - name: Plafond chambre Mahé
-    entity_id: CDM_LED_plafond
+  - entity_id: CDM_LED_plafond
     xy: true
-  - name: Ext entree 1
-    entity_id: OUT_LED_entree1
-  - name: Ext entree 2
-    entity_id: OUT_LED_entree2
-  - name: Ext garage 1
-    entity_id: OUT_LED_garage1
-  - name: Ext garage 2
-    entity_id: OUT_LED_garage2
-  - name: Ext allee 1
-    entity_id: OUT_LED_allee1
-  - name: Ext allee 2
-    entity_id: OUT_LED_allee2
-  - name: Ext allee 3
-    entity_id: OUT_LED_allee3
-  - name: CDP_LED_tele
-    entity_id: CDP_LED_tele
+  - entity_id: OUT_LED_entree1
+  - entity_id: OUT_LED_entree2
+  - entity_id: OUT_LED_garage1
+  - entity_id: OUT_LED_garage2
+  - entity_id: OUT_LED_allee1
+  - entity_id: OUT_LED_allee2
+  - entity_id: OUT_LED_allee3
+  - entity_id: CDP_LED_tele
     effect_hue: true

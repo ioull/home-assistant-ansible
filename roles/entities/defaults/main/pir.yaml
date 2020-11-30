@@ -1,14 +1,8 @@
 pir:
-  - name: CDP_PIR
-    entity_id: CDP_PIR
-  - name: DGT_PIR
-    entity_id: DGT_PIR
-  - name: ENT_PIR
-    entity_id: ENT_PIR
-  - name: SAM_PIR
-    entity_id: SAM_PIR
-  - name: TER_PIR
-    entity_id: TER_PIR
-  - name: OUT_PIR_entree
-    entity_id: OUT_PIR_entree
+  - entity_id: CDP_PIR
+  - entity_id: DGT_PIR
+  - entity_id: ENT_PIR
+  - entity_id: SAM_PIR
+  - entity_id: TER_PIR
+  - entity_id: OUT_PIR_entree
     illuminance: true
