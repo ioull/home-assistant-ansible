@@ -2,7 +2,9 @@
 {% block cardlist %}
 {% for entity in view.entities %}
   - type: 'custom:mini-graph-card'
-    align_icon: left
+    align_state: center
+    #align_header: left
+    align_icon: right
     color_thresholds:
       - color: '#1da4f2'
         value: 16
@@ -18,12 +20,14 @@
       - {{ entity.temperature_sensor }}
     hour24: true
     line_color: '#1da4f2'
-    more_info: false
     name: {{ entity.name }}
-    points_per_hour: 1.5
+    points_per_hour: 1
+    decimals: 1
     show:
-      points: false
+      points: hover
       labels: true
-      name: true
+      labels_secondary: false
+      icon: true
+      icon_adaptive_color: true
 {% endfor %}
 {% endblock %}
