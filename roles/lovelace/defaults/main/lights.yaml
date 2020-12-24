@@ -21,3 +21,8 @@ lights:
     - light.sam_led_etagere
     - light.sam_led_plafond
     - light.sam_light
+    - light.sam_grp_sapin
+    - light.sam_pri_sapin
+    - light.sam_pri_bar
+    - light.cdp_pri_moustique
+    - light.ter_pri_guirlande

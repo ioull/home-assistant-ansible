@@ -1,0 +1,28 @@
+light:
+  - platform: "mqtt"
+    name: "{{ data.entity_id }}"
+    state_topic: "zigbee2mqtt/{{ data.entity_id }}"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_off: "OFF"
+    payload_on: "ON"
+    value_template: "{{ '{{' }} value_json.state {{ '}}' }}"
+    command_topic: "zigbee2mqtt/{{ data.entity_id }}/set"
+
+sensor:
+  - platform: "mqtt"
+    name: "{{ data.entity_id }}_linkquality"
+    state_topic: "zigbee2mqtt/{{ data.entity_id }}"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "lqi"
+    value_template: "{{ '{{' }} value_json.linkquality {{ '}}' }}"
+    icon: "mdi:signal"
+
+binary_sensor:
+  - platform: "mqtt"
+    name: "{{ data.entity_id }}_update_available"
+    state_topic: "zigbee2mqtt/{{ data.entity_id }}"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_on: true
+    payload_off: false
+    value_template: "{{ '{{' }} value_json.update_available {{ '}}' }}"
+
