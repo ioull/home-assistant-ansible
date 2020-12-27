@@ -17,7 +17,6 @@ temperatures:
       humidity_sensor: sensor.cdp_tmp_humidity
     - name: Piscine
       temperature_sensor: sensor.pis_tmp_temperature
-      humidity_sensor: sensor.pis_tmp_humidity
     - name: Mahéva
       temperature_sensor: sensor.cdm_tmp_temperature
       humidity_sensor: sensor.cdm_tmp_humidity

@@ -3,7 +3,6 @@
 {% for entity in view.entities %}
   - type: 'custom:mini-graph-card'
     align_state: center
-    #align_header: left
     align_icon: right
     color_thresholds:
       - color: '#1da4f2'
@@ -17,16 +16,27 @@
       - color: '#ef1d0f'
         value: 23
     entities:
-      - {{ entity.temperature_sensor }}
+      - entity: {{ entity.temperature_sensor }}
+        name: Temperature
+{% if entity.humidity_sensor is defined %}
+      - entity: {{ entity.humidity_sensor }}
+        name: Humidité
+        y_axis: secondary
+        show_fill: false
+        show_state: false
+        color: grey
+{% endif %}
     hour24: true
     line_color: '#1da4f2'
     name: {{ entity.name }}
     points_per_hour: 1
     decimals: 1
+    font_size: 75
     show:
       points: hover
+      legend: false
       labels: true
-      labels_secondary: false
+      labels_secondary: true
       icon: true
       icon_adaptive_color: true
 {% endfor %}
