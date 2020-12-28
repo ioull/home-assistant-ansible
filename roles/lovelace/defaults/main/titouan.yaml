@@ -1,0 +1,12 @@
+titouan:
+  name: Titouan
+  icon: mdi:human-male
+  template: children
+  visibility:
+    - titouan
+  temperatures:
+    - name: Temperature
+      temperature_sensor: sensor.cdt_tmp_temperature
+  lights:
+    - name: Plafond
+      entity: light.cdt_led_plafond

@@ -4,6 +4,9 @@ lovelaces:
     icon: mdi:home
     show_in_sidebar: true
     views:
+      - maheva
+      - lilou
+      - titouan
       - temperatures
       - lights
       - covers

@@ -3,9 +3,6 @@ temperatures:
   icon: mdi:thermometer
   template: temperatures
   visibility:
-    - lilou
-    - maheva
-    - titouan
     - sandrine
     - vincent
   entities:

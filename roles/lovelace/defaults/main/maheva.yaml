@@ -1,0 +1,12 @@
+maheva:
+  name: Maheva
+  icon: mdi:human-female
+  template: children
+  visibility:
+    - maheva
+  temperatures:
+    - name: Temperature
+      temperature_sensor: sensor.cdm_tmp_temperature
+  lights:
+    - name: Plafond
+      entity: light.cdm_led_plafond

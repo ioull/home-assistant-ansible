@@ -1,0 +1,12 @@
+lilou:
+  name: Lilou
+  icon: mdi:human-female
+  template: children
+  visibility:
+    - lilou
+  temperatures:
+    - name: Temperature
+      temperature_sensor: sensor.cdl_tmp_temperature
+  lights:
+    - name: Lampe
+      entity: light.cdl_led_plafond

@@ -1,0 +1,68 @@
+{% extends "layout/view_layout.yaml.j2" %}
+{% block cardlist %}
+{% for entity in view.temperatures %}
+  - type: 'custom:mini-graph-card'
+    align_state: center
+    align_icon: right
+    color_thresholds:
+      - color: '#1da4f2'
+        value: 16
+      - color: '#11f13a'
+        value: 18
+      - color: '#f0da11'
+        value: 20
+      - color: '#ef5a0f'
+        value: 22
+      - color: '#ef1d0f'
+        value: 23
+    entities:
+      - entity: {{ entity.temperature_sensor }}
+        name: Temperature
+{% if entity.humidity_sensor is defined %}
+      - entity: {{ entity.humidity_sensor }}
+        name: Humidité
+        y_axis: secondary
+        show_fill: false
+        show_state: false
+        color: grey
+{% endif %}
+    hour24: true
+    line_color: '#1da4f2'
+    name: {{ entity.name }}
+    points_per_hour: 1
+    decimals: 1
+    font_size: 75
+    show:
+      points: hover
+      legend: false
+      labels: true
+      labels_secondary: true
+      icon: true
+      icon_adaptive_color: true
+{% endfor %}
+{% for entity in view.lights %}
+  - type: custom:light-entity-card
+    entity: {{ entity.entity }}
+    header: {{ entity.name }}
+    smooth_color_wheel: true
+    show_slider_percent: true
+    consolidate_entities: true
+    persist_features: true
+{% endfor %}
+  - type: 'custom:meteofrance-weather-card'
+    entity: weather.lagardelle_sur_leze
+    number_of_forecasts: '5'
+    name: Miremont
+    detailEntity: sensor.miremont_rain_chance
+    alertEntity: sensor.31_weather_alert
+    forecast: true
+    alert_forecast: true
+    one_hour_forecast: true
+    rainChanceEntity: sensor.miremont_rain_chance
+    uvEntity: sensor.miremont_uv
+    cloudCoverEntity: sensor.miremont_cloud_cover
+    freezeChanceEntity: sensor.miremont_freeze_chance
+    snowChanceEntity: sensor.miremont_snow_chance
+    rainForecastEntity: sensor.miremont_next_rain
+    details: false
+{% endblock %}
