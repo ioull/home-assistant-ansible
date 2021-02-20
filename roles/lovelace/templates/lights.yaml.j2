@@ -1,0 +1,45 @@
+{% extends "layout/view_layout.yaml.j2" %}
+{% block cardlist %}
+  - type: entities
+    entities:
+{% for entity in view.entities %}
+      - entity: {{ entity.entity }}
+        type: 'custom:slider-entity-row'
+        toggle: true
+{% if entity.color_temp is defined %}
+      - entity: {{ entity.entity }}
+        type: 'custom:rgb-light-card'
+        hide_when_off: true
+        justify: around
+        colors:
+          - color_temp: 195
+            transition: 1
+          - color_temp: 276
+            transition: 1
+          - color_temp: 340
+            transition: 1
+          - color_temp: 385
+            transition: 1
+          - color_temp: 451
+            transition: 1
+{% endif %}
+{% if entity.rgb is defined %}
+      - entity: {{ entity.entity }}
+        type: 'custom:rgb-light-card'
+        hide_when_off: true
+        justify: around
+        colors:
+          - rgb_color: [241,224,181]
+            transition: 1
+          - rgb_color: [239,210,117]
+            transition: 1
+          - rgb_color: [71,208,246]
+            transition: 1
+          - rgb_color: [255,127,255]
+            transition: 1
+          - rgb_color: [255,100,100]
+            transition: 1
+{% endif %}
+
+{% endfor %}
+{% endblock %}

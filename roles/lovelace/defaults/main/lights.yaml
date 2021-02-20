@@ -4,25 +4,25 @@ lights:
   visibility:
     - sandrine
     - vincent
-  template: entities
+  template: lights
   entities:
-    - light.cdl_led_plafond
-    - light.cdm_led_plafond
-    - light.cdp_led_tele
-    - light.cdt_led_plafond
-    - light.out_led_allee1
-    - light.out_led_allee2
-    - light.out_led_allee3
-    - light.out_led_entree1
-    - light.out_led_entree2
-    - light.out_led_garage1
-    - light.out_led_garage2
-    - light.sam_led_buffet
-    - light.sam_led_etagere
-    - light.sam_led_plafond
-    - light.sam_light
-    - light.sam_grp_sapin
-    - light.sam_pri_sapin
-    - light.sam_pri_bar
-    - light.cdp_pri_moustique
-    - light.ter_pri_guirlande
+    - entity: light.sam_led_plafond
+    - entity: light.sam_light
+    - entity: light.sam_led_buffet
+    - entity: light.sam_led_etagere
+      color_temp: true
+    - entity: light.ter_pri_guirlande
+    - entity: light.cdp_led_tele
+    - entity: light.cdl_led_plafond
+      rgb: true
+    - entity: light.cdm_led_plafond
+      rgb: true
+    - entity: light.cdt_led_plafond
+      rgb: true
+    - entity: light.out_led_allee1
+    - entity: light.out_led_allee2
+    - entity: light.out_led_allee3
+    - entity: light.out_led_entree1
+    - entity: light.out_led_entree2
+    - entity: light.out_led_garage1
+    - entity: light.out_led_garage2

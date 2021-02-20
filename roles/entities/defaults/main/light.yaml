@@ -4,12 +4,6 @@ light:
   - entity_id: SAM_LED_buffet
   - entity_id: SAM_LED_etagere
     color_temp: true
-  - entity_id: CDP_PRI_moustique
-    type: zigbee2mqtt_plug_light
-  - entity_id: SAM_PRI_bar
-    type: zigbee2mqtt_plug_light
-  - entity_id: SAM_PRI_sapin
-    type: zigbee2mqtt_plug_light
   - entity_id: CDT_LED_plafond
     xy: true
   - entity_id: CDL_LED_plafond
