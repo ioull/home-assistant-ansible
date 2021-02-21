@@ -1,0 +1,6 @@
+admin:
+  name: Admin
+  icon: mdi:cog
+  visibility:
+    - vincent
+  template: admin

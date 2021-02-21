@@ -1,0 +1,23 @@
+{% import 'tools/macros.j2' as macros %}
+
+{% extends "tools/view_layout.yaml.j2" %}
+{% block cardlist %}
+{{ macros.fil_pilote('Chambre','cdp_pil') }}
+{{ macros.fil_pilote('Salle à Manger','sam_pil') }}
+  - type: 'custom:meteofrance-weather-card'
+    entity: weather.lagardelle_sur_leze
+    number_of_forecasts: '5'
+    name: Miremont
+    detailEntity: sensor.miremont_rain_chance
+    alertEntity: sensor.31_weather_alert
+    forecast: true
+    alert_forecast: true
+    one_hour_forecast: true
+    rainChanceEntity: sensor.miremont_rain_chance
+    uvEntity: sensor.miremont_uv
+    cloudCoverEntity: sensor.miremont_cloud_cover
+    freezeChanceEntity: sensor.miremont_freeze_chance
+    snowChanceEntity: sensor.miremont_snow_chance
+    rainForecastEntity: sensor.miremont_next_rain
+    details: true
+{% endblock %}

@@ -1,0 +1,7 @@
+home:
+  name: Home
+  icon: mdi:home
+  visibility:
+    - sandrine
+    - vincent
+  template: home

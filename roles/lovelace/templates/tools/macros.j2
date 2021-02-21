@@ -1,0 +1,53 @@
+{% macro input_select(name, input_select, values) %}
+  - type: 'custom:stack-in-card'
+    mode: vertical
+    keep:
+      margin: true
+      border_radius: true
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: markdown
+            content: '# {{name}}'
+            style: |
+              ha-card {
+                font-size: 12px;
+              }
+          - type: markdown
+            content: '{{ '{{' }} states(''input_select.{{input_select}}'') | capitalize {{ '}}' }}'
+            style: |
+              ha-card {
+                font-size: 14px;
+                text-align: right;
+                font-style: italic;
+              }
+      - type: horizontal-stack
+        cards:
+{% for value in values %}
+          - type: 'custom:button-card'
+            icon: '{{ value[1] }}'
+            name: '{{ value[0] | capitalize }}'
+            entity: input_select.{{input_select}}
+            show_state: false
+            tap_action:
+              action: call-service
+              service: input_select.select_option
+              service_data:
+                entity_id: input_select.{{input_select}}
+                option: '{{ value[0] }}'
+            state:
+              - value: '{{ value[0] }}'
+                color: var(--paper-item-icon-active-color)
+              - operator: default
+                color: var(--primary-text-color)
+            aspect_ratio: 1/1
+            styles:
+              card:
+                - font-size: 12px
+{% endfor %}
+{%- endmacro %}
+
+{% macro fil_pilote(name,inputselect) %}
+{{ input_select(name,inputselect,[['confort','mdi:fire'],['confort-1','mdi:fire'],['confort-2','mdi:fire'],['eco','mdi:leaf'],['hors_gel','mdi:snowflake'],['off','mdi:power']]) }}
+{%- endmacro %}
+

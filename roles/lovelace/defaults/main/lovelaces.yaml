@@ -4,12 +4,14 @@ lovelaces:
     icon: mdi:home
     show_in_sidebar: true
     views:
+      - home
       - maheva
       - lilou
       - titouan
       - temperatures
       - lights
       - covers
+      - admin
   test:
     title: TEST
     icon: mdi:window-shutter
