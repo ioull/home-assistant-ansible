@@ -2,9 +2,9 @@
 
 {% extends "tools/view_layout.yaml.j2" %}
 {% block cardlist %}
+{{ macros.input_select('Wifi','tec_net_wifi',[['infini','mdi:infinity'],['temporisé','mdi:alarm'],['off','mdi:power']], "{% if is_state('input_select.tec_net_wifi', 'temporisé') %} {{states('sensor.tec_net_wifiremainingtime') }} {% else %} {{states('input_select.tec_net_wifi') | capitalize }} {% endif %}" ) }}
 {{ macros.fil_pilote('Chambre','cdp_pil') }}
 {{ macros.fil_pilote('Salle à Manger','sam_pil') }}
-{{ macros.input_select('Wifi','tec_net_wifi',[['infini','mdi:infinity'],['temporisé','mdi:alarm'],['off','mdi:power']]) }}
   - type: 'custom:meteofrance-weather-card'
     entity: weather.lagardelle_sur_leze
     number_of_forecasts: '5'

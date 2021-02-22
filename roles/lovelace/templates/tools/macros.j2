@@ -1,4 +1,4 @@
-{% macro input_select(name, input_select, values) %}
+{% macro input_select(name, input_select, values, value=none) %}
   - type: 'custom:stack-in-card'
     mode: vertical
     keep:
@@ -14,7 +14,12 @@
                 font-size: 12px;
               }
           - type: markdown
-            content: '{{ '{{' }} states(''input_select.{{input_select}}'') | capitalize {{ '}}' }}'
+            content: |
+{% if value is not none %}
+               {{value}}
+{% else %}
+               {{ '{{' }} states('input_select.{{input_select}}') | capitalize {{ '}}' }}
+{% endif %}
             style: |
               ha-card {
                 font-size: 14px;
