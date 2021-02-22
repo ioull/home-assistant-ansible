@@ -4,6 +4,7 @@
 {% block cardlist %}
 {{ macros.fil_pilote('Chambre','cdp_pil') }}
 {{ macros.fil_pilote('Salle à Manger','sam_pil') }}
+{{ macros.input_select('Wifi','tec_net_wifi',[['infini','mdi:infinity'],['temporisé','mdi:alarm'],['off','mdi:power']]) }}
   - type: 'custom:meteofrance-weather-card'
     entity: weather.lagardelle_sur_leze
     number_of_forecasts: '5'
