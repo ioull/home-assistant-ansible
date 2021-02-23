@@ -1,4 +1,4 @@
-{% macro input_select(name, input_select, values, value=none) %}
+{% macro input_select(name, input_select, buttons, value=none) %}
   - type: 'custom:stack-in-card'
     mode: vertical
     keep:
@@ -18,7 +18,9 @@
 {% if value is not none %}
                {{value}}
 {% else %}
-               {{ '{{' }} states('input_select.{{input_select}}') | capitalize {{ '}}' }}
+{% for button in buttons %}
+               {{ '{%' }} if is_state('input_select.{{input_select}}', '{{button.ha}}') {{ '%}' }} {{ button.name }} {{ '{%' }} endif {{ '%}' }}
+{% endfor %}
 {% endif %}
             style: |
               ha-card {
@@ -28,10 +30,10 @@
               }
       - type: horizontal-stack
         cards:
-{% for value in values %}
+{% for button in buttons %}
           - type: 'custom:button-card'
-            icon: '{{ value[1] }}'
-            name: '{{ value[0] | capitalize }}'
+            icon: '{{ button.icon }}'
+            name: '{{ button.name }}'
             entity: input_select.{{input_select}}
             show_state: false
             tap_action:
@@ -39,10 +41,14 @@
               service: input_select.select_option
               service_data:
                 entity_id: input_select.{{input_select}}
-                option: '{{ value[0] }}'
+                option: '{{ button.ha }}'
             state:
-              - value: '{{ value[0] }}'
+              - value: '{{ button.ha }}'
+{% if button.color is defined %}
+                color: '{{ button.color }}'
+{% else %}
                 color: var(--paper-item-icon-active-color)
+{% endif %}
               - operator: default
                 color: var(--primary-text-color)
             styles:
@@ -50,8 +56,3 @@
                 - font-size: 12px
 {% endfor %}
 {%- endmacro %}
-
-{% macro fil_pilote(name,inputselect) %}
-{{ input_select(name,inputselect,[['confort','mdi:fire'],['confort-1','mdi:fire'],['confort-2','mdi:fire'],['eco','mdi:leaf'],['hors_gel','mdi:snowflake'],['off','mdi:power']]) }}
-{%- endmacro %}
-

@@ -1,0 +1,25 @@
+input_select_fil_pilote:
+  - name: Confort
+    ha: confort
+    icon: mdi:fire
+  - name: Eco
+    ha: eco
+    icon: mdi:leaf
+  - name: Hors-Gel
+    ha: hors_gel
+    icon: mdi:snowflake
+  - name: 'Off'
+    ha: 'off'
+    icon: mdi:power
+    color: 'rgb(180,94,224)'
+input_select_wifi:
+  - name: Infini
+    ha: infini
+    icon: mdi:infinity
+  - name: Temporisé
+    ha: temporisé
+    icon: mdi:alarm
+  - name: 'Off'
+    ha: 'off'
+    icon: mdi:power
+    color: 'rgb(180,94,224)'
