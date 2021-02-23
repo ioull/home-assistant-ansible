@@ -19,8 +19,10 @@
                {{value}}
 {% else %}
 {% for button in buttons %}
-               {{ '{%' }} if is_state('input_select.{{input_select}}', '{{button.ha}}') {{ '%}' }} {{ button.name }} {{ '{%' }} endif {{ '%}' }}
+               {{ '{%' }} {% if loop.index !=1 %}el{% endif %}if is_state('input_select.{{input_select}}', '{{button.ha}}') {{ '%}' }} {{ button.name }}
 {% endfor %}
+               {{ '{%' }} else {{ '%}' }} {{ '{{' }} states('input_select.{{input_select}}') {{ '}}' }}
+               {{ '{%' }} endif {{ '%}' }}
 {% endif %}
             style: |
               ha-card {
