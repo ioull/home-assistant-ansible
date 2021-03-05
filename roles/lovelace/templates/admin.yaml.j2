@@ -24,67 +24,101 @@
       method: state
       numeric: true
   - type: 'custom:stack-in-card'
-    mode: horizontal
+    mode: vertical
     title: 'Unifi update'
     keep:
-      margin: false
+      margin: true
       border_radius: true
     cards:
-      - type: 'custom:button-card'
-        name: USG
-        icon: 'mdi:security-network'
-        styles:
-          card:
-            - background-color: |
-                [[[
-                  if (states["device_tracker.usg"].attributes.upgradable == true) return 'orange';
-                ]]]
-          name:
-            - font-size: 13px
-      - type: 'custom:button-card'
-        name: Switch
-        icon: 'mdi:server-network'
-        styles:
-          card:
-            - background-color: |
-                [[[
-                  if (states["device_tracker.us16p150"].attributes.upgradable == true) return 'orange';
-                ]]]
-          name:
-            - font-size: 13px
-      - type: 'custom:button-card'
-        name: AP SAM
-        icon: 'mdi:access-point'
-        styles:
-          card:
-            - background-color: |
-                [[[
-                  if (states["device_tracker.uap_ac_lr_sam"].attributes.upgradable == true) return 'orange';
-                ]]]
-          name:
-            - font-size: 13px
-      - type: 'custom:button-card'
-        name: AP Garage
-        icon: 'mdi:access-point'
-        styles:
-          card:
-            - background-color: |
-                [[[
-                  if (states["device_tracker.uap_ac_lite_garage"].attributes.upgradable == true) return 'orange';
-                ]]]
-          name:
-            - font-size: 13px
-      - type: 'custom:button-card'
-        name: AP Cabanon
-        icon: 'mdi:access-point'
-        styles:
-          card:
-            - background-color: |
-                [[[
-                  if (states["device_tracker.uap_ac_lite_cabanon"].attributes.upgradable == true) return 'orange';
-                ]]]
-          name:
-            - font-size: 13px
+     - type: 'custom:stack-in-card'
+       mode: horizontal
+       keep:
+         margin: false
+         border_radius: true
+       cards:
+         - type: 'custom:button-card'
+           name: USG
+           icon: 'mdi:security-network'
+           styles:
+             card:
+               - background-color: |
+                   [[[
+                     if (states["device_tracker.usg"].attributes.upgradable == true) return 'orange';
+                   ]]]
+             name:
+               - font-size: 13px
+         - type: 'custom:button-card'
+           name: Switch
+           icon: 'mdi:server-network'
+           styles:
+             card:
+               - background-color: |
+                   [[[
+                     if (states["device_tracker.us16p150"].attributes.upgradable == true) return 'orange';
+                   ]]]
+             name:
+               - font-size: 13px
+         - type: 'custom:button-card'
+           name: SAM
+           icon: 'mdi:server-network'
+           styles:
+             card:
+               - background-color: |
+                   [[[
+                     if (states["device_tracker.flex_mini_sam"].attributes.upgradable == true) return 'orange';
+                   ]]]
+             name:
+               - font-size: 13px
+         - type: 'custom:button-card'
+           name: Terrasse
+           icon: 'mdi:server-network'
+           styles:
+             card:
+               - background-color: |
+                   [[[
+                     if (states["device_tracker.usmini"].attributes.upgradable == true) return 'orange';
+                   ]]]
+             name:
+               - font-size: 13px
+     - type: 'custom:stack-in-card'
+       mode: horizontal
+       keep:
+         margin: false
+         border_radius: true
+       cards:
+         - type: 'custom:button-card'
+           name: AP SAM
+           icon: 'mdi:access-point'
+           styles:
+             card:
+               - background-color: |
+                   [[[
+                     if (states["device_tracker.uap_ac_lr_sam"].attributes.upgradable == true) return 'orange';
+                   ]]]
+             name:
+               - font-size: 13px
+         - type: 'custom:button-card'
+           name: AP Garage
+           icon: 'mdi:access-point'
+           styles:
+             card:
+               - background-color: |
+                   [[[
+                     if (states["device_tracker.uap_ac_lite_garage"].attributes.upgradable == true) return 'orange';
+                   ]]]
+             name:
+               - font-size: 13px
+         - type: 'custom:button-card'
+           name: AP Cabanon
+           icon: 'mdi:access-point'
+           styles:
+             card:
+               - background-color: |
+                   [[[
+                     if (states["device_tracker.uap_ac_lite_cabanon"].attributes.upgradable == true) return 'orange';
+                   ]]]
+             name:
+               - font-size: 13px
   - type: 'custom:auto-entities'
     card:
       type: entities

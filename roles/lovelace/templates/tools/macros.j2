@@ -1,4 +1,4 @@
-{% macro input_select(name, input_select, buttons, value=none) %}
+{% macro input_select(name, input_select, buttons, value=none, graph=false) %}
   - type: 'custom:stack-in-card'
     mode: vertical
     keep:
@@ -62,4 +62,12 @@
               card:
                 - font-size: 12px
 {% endfor %}
+{% if graph != false  %}
+      - type: history-graph
+        entities:
+          - entity: input_select.{{input_select}}
+        hours_to_show: 24
+        refresh_interval: 0
+{% endif %}
+
 {%- endmacro %}
