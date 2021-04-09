@@ -48,45 +48,6 @@
              name:
                - font-size: 13px
          - type: 'custom:button-card'
-           name: Switch
-           icon: 'mdi:server-network'
-           state:
-             - operator: template
-               value: >
-                 [[[ return states['device_tracker.us16p150'].attributes.upgradable ]]]
-               color: orange
-           styles:
-             name:
-               - font-size: 13px
-         - type: 'custom:button-card'
-           name: SAM
-           icon: 'mdi:server-network'
-           state:
-             - operator: template
-               value: >
-                 [[[ return states['device_tracker.flex_mini_sam'].attributes.upgradable ]]]
-               color: orange
-           styles:
-             name:
-               - font-size: 13px
-         - type: 'custom:button-card'
-           name: Terrasse
-           icon: 'mdi:server-network'
-           state:
-             - operator: template
-               value: >
-                 [[[ return states['device_tracker.usmini'].attributes.upgradable ]]]
-               color: orange
-           styles:
-             name:
-               - font-size: 13px
-     - type: 'custom:stack-in-card'
-       mode: horizontal
-       keep:
-         margin: false
-         border_radius: true
-       cards:
-         - type: 'custom:button-card'
            name: AP SAM
            icon: 'mdi:access-point'
            state:
@@ -115,6 +76,56 @@
              - operator: template
                value: >
                  [[[ return states['device_tracker.uap_ac_lite_cabanon'].attributes.upgradable ]]]
+               color: orange
+           styles:
+             name:
+               - font-size: 13px
+     - type: 'custom:stack-in-card'
+       mode: horizontal
+       keep:
+         margin: false
+         border_radius: true
+       cards:
+         - type: 'custom:button-card'
+           name: Switch 24
+           icon: 'mdi:server-network'
+           state:
+             - operator: template
+               value: >
+                 [[[ return states['device_tracker.us24'].attributes.upgradable ]]]
+               color: orange
+           styles:
+             name:
+               - font-size: 13px
+         - type: 'custom:button-card'
+           name: Switch POE
+           icon: 'mdi:server-network'
+           state:
+             - operator: template
+               value: >
+                 [[[ return states['device_tracker.us16p150'].attributes.upgradable ]]]
+               color: orange
+           styles:
+             name:
+               - font-size: 13px
+         - type: 'custom:button-card'
+           name: SAM
+           icon: 'mdi:server-network'
+           state:
+             - operator: template
+               value: >
+                 [[[ return states['device_tracker.flex_mini_sam'].attributes.upgradable ]]]
+               color: orange
+           styles:
+             name:
+               - font-size: 13px
+         - type: 'custom:button-card'
+           name: Terrasse
+           icon: 'mdi:server-network'
+           state:
+             - operator: template
+               value: >
+                 [[[ return states['device_tracker.usmini'].attributes.upgradable ]]]
                color: orange
            styles:
              name:
