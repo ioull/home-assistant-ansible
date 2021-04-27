@@ -2,7 +2,7 @@ light:
   - platform: "mqtt"
     name: "{{ data.entity_id }}"
     state_topic: "zigbee2mqtt/{{ data.entity_id }}"
-    availability_topic: "zigbee2mqtt/bridge/state"
+    availability_topic: "zigbee2mqtt/{{ data.entity_id }}/availability"
     brightness: true
 {% if data.hs is defined %}
     hs: {{ data.hs | lower }}
@@ -31,7 +31,7 @@ sensor:
   - platform: "mqtt"
     name: "{{ data.entity_id }}"
     state_topic: "zigbee2mqtt/{{ data.entity_id }}"
-    availability_topic: "zigbee2mqtt/bridge/state"
+    availability_topic: "zigbee2mqtt/{{ data.entity_id }}/availability"
     icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ '{{' }} value_json.linkquality {{ '}}' }}"
@@ -40,7 +40,7 @@ binary_sensor:
   - platform: "mqtt"
     name: "{{ data.entity_id }}"
     state_topic: "zigbee2mqtt/{{ data.entity_id }}"
-    availability_topic: "zigbee2mqtt/bridge/state"
+    availability_topic: "zigbee2mqtt/{{ data.entity_id }}/availability"
     payload_on: true
     payload_off: false
     value_template: "{{ '{{' }} value_json.update_available {{ '}}' }}"

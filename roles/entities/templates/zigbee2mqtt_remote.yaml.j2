@@ -2,7 +2,7 @@ sensor:
   - platform: "mqtt"
     name: "{{ data.entity_id }}_battery"
     state_topic: "zigbee2mqtt/{{ data.entity_id }}"
-    availability_topic: "zigbee2mqtt/bridge/state"
+    availability_topic: "zigbee2mqtt/{{ data.entity_id }}/availability"
     unit_of_measurement: "%"
     value_template: "{{ '{{' }} value_json.battery {{ '}}' }}"
     device_class: "battery"
@@ -10,7 +10,7 @@ sensor:
   - platform: "mqtt"
     name: "{{ data.entity_id }}_linkquality"
     state_topic: "zigbee2mqtt/{{ data.entity_id }}"
-    availability_topic: "zigbee2mqtt/bridge/state"
+    availability_topic: "zigbee2mqtt/{{ data.entity_id }}/availability"
     icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ '{{' }} value_json.linkquality {{ '}}' }}"
@@ -18,7 +18,7 @@ sensor:
   - platform: "mqtt"
     name: "{{ data.entity_id }}_action"
     state_topic: "zigbee2mqtt/{{ data.entity_id }}"
-    availability_topic: "zigbee2mqtt/bridge/state"
+    availability_topic: "zigbee2mqtt/{{ data.entity_id }}/availability"
     value_template: "{{ '{{' }} value_json.action {{ '}}' }}"
     icon: "mdi:gesture-double-tap"
 
@@ -27,7 +27,7 @@ binary_sensor:
   - platform: "mqtt"
     name: "{{ data.entity_id }}_update_available"
     state_topic: "zigbee2mqtt/{{ data.entity_id }}"
-    availability_topic: "zigbee2mqtt/bridge/state"
+    availability_topic: "zigbee2mqtt/{{ data.entity_id }}/availability"
     payload_on: true
     payload_off: false
     value_template: "{{ '{{' }} value_json.update_available {{ '}}' }}"

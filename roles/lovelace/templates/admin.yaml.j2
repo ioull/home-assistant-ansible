@@ -23,6 +23,15 @@
     sort:
       method: state
       numeric: true
+  - type: 'custom:auto-entities'
+    card:
+      type: entities
+      title: Indisponible
+    filter:
+      include:
+        - attributes:
+            unit_of_measurement: 'lqi'
+          state: "unavailable"
   - type: 'custom:stack-in-card'
     mode: vertical
     title: 'Unifi update'
