@@ -7,13 +7,15 @@ temperature:
   - entity_id: CAB_TMP
     type: jeedom2mqtt_temperature
   - entity_id: CDL_TMP
-    type: jeedom2mqtt_temperature
+    pressure: true
   - entity_id: CDM_TMP
-    type: jeedom2mqtt_temperature
+    pressure: true
   - entity_id: CDT_TMP
-    type: jeedom2mqtt_temperature
+    pressure: true
   - entity_id: CDP_TMP
-    type: jeedom2mqtt_temperature
+    pressure: true
+  - entity_id: SDB_TMP
+    pressure: true
   - entity_id: CUI_TMP_congelateur
     type: jeedom2mqtt_temperature
   - entity_id: GAR_TMP_congelateur1
@@ -25,4 +27,4 @@ temperature:
   - entity_id: PIS_TMP
     type: jeedom2mqtt_temperature
   - entity_id: SAM_TMP
-    type: jeedom2mqtt_temperature
+    pressure: true
