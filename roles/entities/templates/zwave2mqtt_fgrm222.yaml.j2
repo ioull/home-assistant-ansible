@@ -1,11 +1,11 @@
 cover:
   - platform: mqtt
     name: "{{ data.entity_id }}"
-    command_topic: "nodered/volets/FGR/{{ data.entity_id }}"
-    position_topic: "zwave2mqtt/{{ data.entity_id }}/38/1/0"
-    set_position_topic: "zwave2mqtt/{{ data.entity_id }}/38/1/0/set"
-    position_template: "{{ '{{' }} value {{ '}}' }}"
+    command_topic: "zwave2mqtt/{{ data.entity_id }}/38/0/targetValue/set"
+    position_topic: "zwave2mqtt/{{ data.entity_id }}/38/0/currentValue"
+    set_position_topic: "zwave2mqtt/{{ data.entity_id }}/38/0/targetValue/set"
+    position_template: "{{ '{{' }} value_json.value | round(0) {{ '}}' }}"
     position_open: 99
     position_closed: 0
-    payload_open: "99"
-    payload_close: "0"
+    payload_open: 99
+    payload_close: 0

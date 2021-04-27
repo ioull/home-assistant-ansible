@@ -1,14 +1,15 @@
 light:
   - platform: mqtt
     name: "{{ data.entity_id }}"
-    state_topic: "zwave2mqtt/{{ data.entity_id }}/38/1/0"
-    state_value_template: "{{ '{{' }} '0' if value == '0' else '99' {{ '}}' }}"
-    command_topic: "zwave2mqtt/{{ data.entity_id }}/38/1/0/set"
+    state_topic: "zwave2mqtt/{{ data.entity_id }}/38/1/currentValue"
+    state_value_template: "{{ '{{' }} '0' if value_json.value == 0 else '99' {{ '}}' }}"
+    command_topic: "zwave2mqtt/{{ data.entity_id }}/38/1/targetValue/set"
     payload_on: '99'
     payload_off: '0'
     brightness_scale: 99
-    brightness_state_topic: "zwave2mqtt/{{ data.entity_id }}/38/1/0"
-    brightness_command_topic: "zwave2mqtt/{{ data.entity_id }}/38/1/0/set"
+    brightness_state_topic: "zwave2mqtt/{{ data.entity_id }}/38/1/currentValue"
+    brightness_command_topic: "zwave2mqtt/{{ data.entity_id }}/38/1/targetValue/set"
+    brightness_value_template: "{{ '{{' }} value_json.value {{ '}}' }}"
     on_command_type: 'brightness'
     optimistic: false
     qos: 1
