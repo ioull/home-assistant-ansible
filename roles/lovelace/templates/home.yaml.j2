@@ -5,6 +5,36 @@
 {{ macros.input_select('Wifi','tec_net_wifi',input_select_wifi, "{% if is_state('input_select.tec_net_wifi', 'temporisé') %} {{states('sensor.tec_net_wifiremainingtime') }} {% else %} {{states('input_select.tec_net_wifi') | capitalize }} {% endif %}", true ) }}
 {{ macros.input_select('Chambre','cdp_pil',input_select_fil_pilote) }}
 {{ macros.input_select('Salle à Manger','sam_pil',input_select_fil_pilote) }}
+  - type: 'custom:auto-entities'
+    card:
+      type: entities
+      title: Ouvertures
+      show_header_toggle: false
+      state_color: true
+    filter:
+      include:
+        - attributes:
+            device_class: door
+          state: 'on'
+    show_empty: false
+    sort:
+      method: last_changed
+      reverse: true
+  - type: 'custom:auto-entities'
+    card:
+      type: entities
+      title: Presences
+      show_header_toggle: false
+      state_color: true
+    filter:
+      include:
+        - attributes:
+            device_class: motion
+          state: 'on'
+    show_empty: false
+    sort:
+      method: last_changed
+      reverse: true
   - type: 'custom:meteofrance-weather-card'
     entity: weather.lagardelle_sur_leze
     number_of_forecasts: '5'
