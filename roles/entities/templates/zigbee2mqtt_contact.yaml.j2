@@ -23,5 +23,9 @@ binary_sensor:
     value_template: "{{ '{{' }} value_json.contact {{ '}}' }}"
     payload_on: false
     payload_off: true
-    device_class: "door"
+{% if data.device_class is defined %}
+    device_class: {{ data.device_class }}
+{% else %}
+    device_class: "window"
+{% endif %}
 
