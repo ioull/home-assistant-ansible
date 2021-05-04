@@ -1,5 +1,6 @@
 temperature:
   - entity_id: TER_TMP
+    pressure: true
   - entity_id: GAR_TMP
     pressure: true
   - entity_id: OUT_TMP
