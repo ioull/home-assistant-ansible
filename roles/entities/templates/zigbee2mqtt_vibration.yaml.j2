@@ -34,3 +34,18 @@ sensor:
     unit_of_measurement: "lqi"
     value_template: "{{ '{{' }} value_json.linkquality {{ '}}' }}"
     icon: "mdi:signal"
+
+binary_sensor:
+  - platform: template
+    sensors:
+      {{ data.entity_id | lower }}_triggered:
+        friendly_name: "{{ data.entity_id }}"
+        device_class: vibration
+        delay_off:
+          seconds: 10
+        value_template: >-
+          {{ '{{' }} is_state('sensor.{{ data.entity_id }}_action', 'vibration')
+             or is_state('sensor.{{ data.entity_id }}_action', 'tilt')
+             or is_state('sensor.{{ data.entity_id }}_action', 'drop')
+          {{ '}}' }}
+
