@@ -16,3 +16,4 @@ contact:
   - entity_id: SAM_CON_portefenetre2
     device_class: "door"
   - entity_id: SAM_CON_volet
+    device_class: "opening"
