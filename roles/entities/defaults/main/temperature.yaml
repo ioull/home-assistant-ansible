@@ -26,6 +26,5 @@ temperature:
   - entity_id: GAR_TMP_sechoir
     type: jeedom2mqtt_temperature
   - entity_id: PIS_TMP
-    type: jeedom2mqtt_temperature
   - entity_id: SAM_TMP
     pressure: true
